@@ -11,16 +11,10 @@
   <%= location.latitude %>
 
   <strong>Longitude: </strong>
-  <%= location.longitude %>psch
+  <%= location.longitude %>
   <br>
 
 <% end %>
 
-<script>
-	  var polyline = L.polyline(latLngs, {color: 'red'}).addTo(map);
-		L.polyline(locations)
-
-		// zoom the map to the polyline
-		map.fitBounds(polyline.getBounds());
-  </script>
+<%= render 'line_script' %>
 

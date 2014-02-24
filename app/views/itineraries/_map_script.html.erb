@@ -1,7 +1,6 @@
 <script>
 var map = L.map('map')
 var bounds = <%= @bounds %> //=> [[lat0, lng0], [lat1, lng1]]
-var polyline = L.polyline(latLngs, {color: 'red'}).addTo(map);
 
 padded = L.latLngBounds( bounds ).pad(0.042) // returns bigger bounds
 map.fitBounds(padded)
@@ -13,5 +12,4 @@ L.tileLayer('http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
           attribution: 'Map Data &copy; <a href="http://openstreetmap.org">OSM</a>',
           maxZoom: 20
       }).addTo(map)
-L.polyline(locations)
 </script>
