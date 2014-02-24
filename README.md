@@ -14,9 +14,7 @@ L'outil principal ici est la [librairie javascript Leaflet](http://leafletjs.com
 #Pas à pas
  * Tracer une ligne entre 2 points
 Leaflet donne dans sa documentatin l'exemple suivant : 
-`Usage example
-
-// create a red polyline from an arrays of LatLng points
+`// create a red polyline from an arrays of LatLng points
 var polyline = L.polyline(latlngs, {color: 'red'}).addTo(map);`
 
 Il s'agit ici d'inclure les coordonnées renseignées dans le formulaire dans cette ligne de code. 
@@ -29,12 +27,21 @@ Par soucis de formalisme, mettre cela dans un partial nommé ici `_line_script.h
 
 TODO
 
+* Pouvoir ajouter une nouvelle ville grace au bouton +1.
+
+	Pour l'instant il est possible de modifier le nombre de villes de l'itinéraire en modifiant à la main la variable @nombre_villes dans l'action new du controller itinéraire. L'objectif est de pouvoir ajouter dynamiquement un nouveau champ sans quitter ni supprimer un itinéraire. 
+
+* Modifier l'ordre d'affichage des points et tracer selon l'affichage
+
+Archives
+
 Ecrire un script qui va rechercher les données brutes (`raw`) des points (appelées locations dans le model).
 
 ``` <script>
   var locations = <%= raw @itinerary.locations.to_json %>
 </script>
 
-* Tracer 2 lignes entre 3 points
 
-* Modifier l'ordre d'affichage des points et tracer selon l'affichage
+
+
+

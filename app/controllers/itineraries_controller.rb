@@ -2,7 +2,8 @@ class ItinerariesController < ApplicationController
 
   def new
     @itinerary = Itinerary.new
-    2.times { @itinerary.locations.build }
+    @nombre_villes=4
+    @nombre_villes.times { @itinerary.locations.build }
   end
 
   def create
@@ -33,6 +34,10 @@ class ItinerariesController < ApplicationController
 
     # fill bounds: http://leafletjs.com/reference.html#latlngbounds
     @bounds = @itinerary.locations.map{ |l| [l.latitude, l.longitude] }
+  end
+
+  def add_city
+
   end
 
   private

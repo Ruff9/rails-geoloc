@@ -17,3 +17,10 @@
 //= require_tree .
 
 $(function(){ $(document).foundation(); });
+
+$(function () {
+  $('#ajouter_ville').click(function () {
+    alert(this.getAttribute('data-message'));
+    return false;
+   })
+});
